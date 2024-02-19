@@ -3,6 +3,8 @@ import { NavigationMenuDemo } from "@/components/main-nav";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${GeistSans.className} ${GeistMono.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
