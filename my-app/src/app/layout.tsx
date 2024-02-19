@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NavigationMenuDemo } from "@/components/main-nav";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -24,7 +25,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="min-h-screen px-96">
+            <NavigationMenuDemo />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
