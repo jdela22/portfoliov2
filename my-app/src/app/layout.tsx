@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { NavigationMenuDemo } from "@/components/main-nav";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-screen px-96">
+          <main className="min-h-screen px-[800px]">
             <NavigationMenuDemo />
             {children}
           </main>
