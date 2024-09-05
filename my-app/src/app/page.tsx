@@ -10,7 +10,15 @@ export default function Home() {
         height={200}
         className="rounded-full mb-4"
       />
-      <div>
+      <div className="animate-slide-up">
+        My name is Jared Delapasse. I'm a software engineer primarily focused on
+        front-end. I've built this site to serve as a playground for the latest
+        tech I'm interested in. I plan on keeping this up-to-date in
+        semi-realtime with my current interests. Feel free to click around and
+        see what I've been up to.
+      </div>
+
+      <div className="animate-slide-up delay-500 opacity-0">
         My name is Jared Delapasse. I'm a software engineer primarily focused on
         front-end. I've built this site to serve as a playground for the latest
         tech I'm interested in. I plan on keeping this up-to-date in
