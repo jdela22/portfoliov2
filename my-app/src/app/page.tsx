@@ -11,7 +11,7 @@ export default function Home() {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
-    if (displayText === "") {
+    if (intervalId.current === 0) {
       intervalId.current = setInterval(() => {
         if (index.current == name.length) return;
         flushSync(() => {
@@ -25,8 +25,6 @@ export default function Home() {
 
     if (index.current == name.length) return clearInterval(intervalId.current);
   }, [displayText]);
-
-  useEffect(() => {}, [displayText]);
 
   return (
     <>
@@ -51,13 +49,7 @@ export default function Home() {
         see what I've been up to.
       </div>
 
-      <div className="animate-slide-up delay-500 opacity-0">
-        My name is Jared Delapasse. I'm a software engineer primarily focused on
-        front-end. I've built this site to serve as a playground for the latest
-        tech I'm interested in. I plan on keeping this up-to-date in
-        semi-realtime with my current interests. Feel free to click around and
-        see what I've been up to.
-      </div>
+      <div className="animate-slide-up delay-500 opacity-0">Socials:</div>
     </>
   );
 }

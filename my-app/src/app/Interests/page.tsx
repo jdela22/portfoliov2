@@ -3,8 +3,8 @@ import NeovimScreenshot from "../../../public/NeovimScreenshot.png";
 const Interests = () => {
   return (
     <>
-      <h1>Coding</h1>
-      <h3>Neovim</h3>
+      <h1 className="text-3xl mb-4">Coding</h1>
+      <h3 className="text-xl">Neovim</h3>
       <Image src={NeovimScreenshot} alt="NeovimScreenshot" className="mb-4" />
       <div className="mb-4">
         <a
@@ -29,7 +29,7 @@ const Interests = () => {
         powerful IDE.
       </div>
       <div className="mb-4">
-        This project was made using Neovim as the editor. I've installed many
+        This site was made using Neovim as the editor. I've installed many
         plugins and keep my dotfiles on my{" "}
         <a
           href="https://github.com/jdela22/dotfiles"
