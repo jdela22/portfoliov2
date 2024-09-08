@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "./mode-toggle";
 
-const components: { title: string; href: string; description: string }[] = [
+const interests: { title: string; href: string; description: string }[] = [
   {
     title: "Neovim",
     href: "/Interests",
@@ -67,34 +67,18 @@ export function NavigationMenuDemo() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            {/* <Link href="/Interests"> */}
-            {/*   <NavigationMenuLink className={navigationMenuTriggerStyle()}> */}
-            {/*     Interests */}
-            {/*   </NavigationMenuLink> */}
-            {/* </Link> */}
             <NavigationMenuTrigger>Interests</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] md:grid-cols-2">
-                {components.map((component) => (
+                {interests.map((interest) => (
                   <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
+                    key={interest.title}
+                    title={interest.title}
+                    href={interest.href}
                   >
-                    {component.description}
+                    {interest.description}
                   </ListItem>
                 ))}
-                {/* <li className="row-span-3"> */}
-                {/*   <NavigationMenuLink asChild> */}
-                {/*     <a className="" href="/interests/neovim"> */}
-                {/*       <div className="mb-2 mt-4 text-lg font-medium">Neovim</div> */}
-                {/*       <p className="text-sm leading-tight text-muted-foreground"> */}
-                {/*         A highly extensible text editor */}
-                {/*       </p> */}
-                {/*     </a> */}
-                {/*   </NavigationMenuLink> */}
-                {/* </li> */}
-                {/* Add more interest items here if needed */}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
